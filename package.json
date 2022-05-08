@@ -2,7 +2,7 @@
 	"name": "fcc-learn-npm-package-json",
 	"author": "Peppe Floyd",
 	"description": "A project that does something awesome",
-	"keywords": ["node", "html", "javascript", "css"],
+	"keywords": ["freecodecamp", "node", "html", "javascript", "css"],
 	"dependencies": {
 		"express": "^4.14.0"
 	},
