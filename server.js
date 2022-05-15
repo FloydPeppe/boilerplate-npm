@@ -8,6 +8,7 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
+var open= require('open');
 
 if (!process.env.DISABLE_XORIGIN) {
   app.use(function(req, res, next) {
@@ -55,6 +56,8 @@ app.use(function(err, req, res, next) {
 
 //Listen on port set in environment variable or default to 3000
 const listener = app.listen(process.env.PORT || 3000, function () {
-  console.log("Node.js listening on port " + listener.address().port);
+  var server_url= "http://localhost:" + listener.address().port;
+  console.log("Node.js listening on " + server_url);
+  open(server_url);
 });
 
